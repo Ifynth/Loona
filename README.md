@@ -6,5 +6,5 @@ Testing Discord Bot
 
 Get in the console and run:
 
-- npm i
-- node .
+- `npm i`
+- `node .`
