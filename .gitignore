@@ -1,3 +1,6 @@
-node_modules
+# personal info
+secret
 
+# node / npm
+node_modules
 package-lock.json
