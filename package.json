@@ -1,0 +1,22 @@
+{
+  "name": "loona",
+  "version": "1.0.0",
+  "description": "Loona Discord Bot",
+  "main": "main.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ifynth/Loona.git"
+  },
+  "author": "Ifynth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ifynth/Loona/issues"
+  },
+  "homepage": "https://github.com/Ifynth/Loona#readme",
+  "dependencies": {
+    "discord.js": "^12.3.1"
+  }
+}
