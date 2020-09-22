@@ -1,4 +1,6 @@
 const Discord = require('discord.js');
+const secret = require('./secret.json');
+
 const client = new Discord.Client();
 
 client.on('ready', () => {
@@ -11,4 +13,4 @@ client.on('message', msg => {
   }
 });
 
-client.login('A rly awesome Token!');
+client.login(secret.token);
