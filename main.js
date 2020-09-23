@@ -1,16 +1,16 @@
-const Discord = require('discord.js');
-const secret = require('./secret.json');
+const Discord = require('discord.js')
+const { token } = require('./config.json')
 
-const client = new Discord.Client();
+const client = new Discord.Client()
 
 client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-});
+  console.log(`Logged in as ${client.user.tag}!`)
+})
 
-client.on('message', msg => {
+client.on('message', (msg) => {
   if (msg.content === 'ping') {
-    msg.reply('Pong!');
+    msg.reply('Pong!')
   }
-});
+})
 
-client.login(secret.token);
+client.login(token)
