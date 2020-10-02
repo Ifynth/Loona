@@ -3,7 +3,7 @@ const commands = require('./commands')
 const startEvents = require('./events')
 
 const client = new Discord.Client()
-client.commands = commands
+client.loona = { commands }
 
 module.exports = {
     startEvents: () => startEvents(client),
