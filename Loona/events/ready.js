@@ -1,10 +1,14 @@
-const { createCategory } = require('../helpers')
+const { category } = require('../helpers')
 
 module.exports = {
   name: 'ready',
   execute() {
-    console.log(`${this.user.username} ist ready!`)
+    const client = this
+    console.log(`${client.user.username} ist ready!`)
 
-    createCategory(this);
+    // create for every server a Loona category
+    client.guilds.cache.forEach((server) => {
+      category.create(server)
+    })
   },
 }

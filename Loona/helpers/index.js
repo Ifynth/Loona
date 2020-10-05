@@ -1,3 +1,3 @@
-const createCategory = require('./createCategory')
+const category = require('./category')
 
-module.exports = { createCategory }
+module.exports = { category }
