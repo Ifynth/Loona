@@ -1,4 +1,4 @@
-const { category } = require('../helpers')
+const { categoryName, gameName } = require('../../config.json')
 
 module.exports = {
   name: 'ready',
@@ -8,7 +8,18 @@ module.exports = {
 
     // create for every server a Loona category
     client.guilds.cache.forEach((server) => {
-      category.create(server)
+      // check if Channel already exist
+      if (
+        !server.channels.cache.find(
+          ({ type, name }) => type === 'category' && name === categoryName
+        )
+      ) {
+        server.channels
+          .create(categoryName, { type: 'category' })
+          .then((category) => {
+            server.channels.create(gameName, { type: 'text', parent: category })
+          })
+      }
     })
   },
 }
