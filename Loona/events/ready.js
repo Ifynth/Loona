@@ -14,6 +14,7 @@ module.exports = {
           ({ type, name }) => type === 'category' && name === categoryName
         )
       ) {
+        console.log("Create Loona Channel on Server " + server.name)
         server.channels
           .create(categoryName, { type: 'category' })
           .then((category) => {
